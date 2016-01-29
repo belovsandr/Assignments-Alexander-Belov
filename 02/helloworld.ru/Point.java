@@ -4,10 +4,14 @@ class Point {
 		this.x=x;
 		this.y=y;
 	}
+	Point () {
+		x = -1;
+		y = -1;
+	}
 }
-class PointCreate {
+class PointCreateAlt {
 	public static void main(String args[]) {
-		Point p = new Point (10,20);
+		Point p = new Point ();
 		System.out.println("x = "+p.x+" y = "+p.y);	
 	}
 }
