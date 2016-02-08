@@ -1,6 +1,3 @@
-lineWidth = 40
-str = '--> text <--'
-puts str.ljust lineWidth
-puts str.center lineWidth
-puts str.rjust lineWidth
-puts str.ljust(lineWidth/2) + str.rjust(lineWidth/2) 
+puts "WHAT DO YOU WANT???????????"
+answer = gets.chomp
+puts "WHADDAYA MEAN \""+answer.upcase+"\"???!? YOU'RE FIRED!!"
