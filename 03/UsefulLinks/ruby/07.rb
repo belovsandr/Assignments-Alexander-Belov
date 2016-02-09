@@ -1,13 +1,11 @@
-foods = ['artichoke','brioche','caramel']
+favorites = []
+favorites.push 'raindrops on roses'
+favorites.push 'whiskey on kittens'
 
-puts foods
-puts
-puts foods.to_s
-puts
-puts foods.join(', ')
-puts
-puts foods.join(' :) ')+' 8)'
+puts favorites[0]
+puts favorites.last
+puts favorites.length
 
-200.times do
-	puts []
-end
+puts favorites.pop
+puts favorites
+puts favorites.length
