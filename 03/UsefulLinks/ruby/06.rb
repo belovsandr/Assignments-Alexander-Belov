@@ -1,17 +1,13 @@
-ans = ''
-bye = 0
-while bye < 3
-	year = rand (1930..1950)
-	puts '(*say something to your granny, please*):'
-	ans = gets.chomp
-	if ans == 'BYE'
-		bye = bye + 1
-	else
-		bye = 0
-		if ans == ans.upcase
-			puts 'NO, NOT SINCE '+year.to_s+'!'
-		else
-			puts 'HUH?! SPEAK UP, SONNY!'
-		end
+puts "Type starting year"
+starty = gets.chomp.to_i
+puts "Type ending year"
+endy  = gets.chomp.to_i
+year = starty
+puts '---------------'
+puts 'Leap years are:'
+while year != endy+1
+	if (year % 400 == 0) or ((year % 4 == 0) and (year % 100 != 0))
+		puts year.to_s
 	end
+	year = year + 1
 end
