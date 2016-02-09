@@ -1,6 +1,8 @@
-puts 'Hello, what\'s your name?'
+puts 'I\'m a fortune-teller. Tell me your name'
 name = gets.chomp
-puts 'Hello, '+name+'.'
 if name == 'Alexander'
-	puts 'What a lovely name!'
+	puts 'I see great things in your future!'
+else
+	puts 'Your future is....Oh my! Look a the time!'
+	puts 'I really need to hurry up, sorry!'
 end
