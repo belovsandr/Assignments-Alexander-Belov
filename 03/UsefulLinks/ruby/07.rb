@@ -1,11 +1,9 @@
-favorites = []
-favorites.push 'raindrops on roses'
-favorites.push 'whiskey on kittens'
+arr = []
+word = nil
+while word != ''
+	puts 'Write your word:'
+	word = gets.chomp
+	arr.push word
+end
+puts arr.sort
 
-puts favorites[0]
-puts favorites.last
-puts favorites.length
-
-puts favorites.pop
-puts favorites
-puts favorites.length
