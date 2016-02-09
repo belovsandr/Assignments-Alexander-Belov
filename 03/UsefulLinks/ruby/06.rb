@@ -1,7 +1,6 @@
-puts 1 > 2
-puts 1 < 2
-puts 5 >= 5
-puts 5 <= 4
-puts 1 == 1
-puts 2 != 1
-puts 'cat' < 'dog'
+puts 'Hello, what\'s your name?'
+name = gets.chomp
+puts 'Hello, '+name+'.'
+if name == 'Alexander'
+	puts 'What a lovely name!'
+end
