@@ -1,8 +1,6 @@
-command = ''
-
-while command != 'bye'
-	puts command
-	command = gets.chomp
+puts 'Hello, what\'s your name?'
+name = gets.chomp
+puts 'Hello, '+name+'.'
+if (name == 'Alexander' or name == 'Ekaterina')
+	puts 'What a lovely name'
 end
-
-puts 'Come again soon!'
