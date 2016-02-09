@@ -1,6 +1,11 @@
-puts 'Hello, what\'s your name?'
-name = gets.chomp
-puts 'Hello, '+name+'.'
-if (name == 'Alexander' or name == 'Ekaterina')
-	puts 'What a lovely name'
+ans = ''
+while ans != 'BYE'
+	year = rand (1930..1950)
+	puts '(*say something to your granny, please*):'
+	ans = gets.chomp
+	if ans == ans.upcase
+		puts 'NO, NOT SINCE '+year.to_s+'!'
+	else
+		puts 'HUH?! SPEAK UP, SONNY!'
+	end
 end
