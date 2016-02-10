@@ -1,8 +1,5 @@
-def sayMoo
-  puts 'mooooo...'
+def sayMoo numberOfMoos
+  puts 'mooooo...'*numberOfMoos
 end
-sayMoo
-sayMoo
+sayMoo 3
 puts 'coin-coin'
-sayMoo
-sayMoo
