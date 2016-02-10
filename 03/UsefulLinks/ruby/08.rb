@@ -1,8 +1,7 @@
-def littlePest var
-  var = nil
-  puts 'HAHA! I ruined your variable'
+def sayMoo numberOfMoos
+  puts 'moooooo....'*numberOfMoos
+  'yellow submarine'
 end
 
-var = 'You can\'t even touch my variable!'
-littlePest var
-puts var 
+x=sayMoo 2
+puts x
