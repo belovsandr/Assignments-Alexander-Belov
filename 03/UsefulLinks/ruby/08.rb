@@ -14,12 +14,57 @@ def englishNumber number
   teenagers = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'ninteen']
 
   left = number
+
+  write = left/1000000000000
+  left = left - write * 1000000000000
+
+  if write > 0
+    trillions = englishNumber write
+    numString = numString + trillions + ' trillion'
+    if left > 0
+      numString = numString + ' '
+    end  
+  end
+
+  write = left/1000000000
+  left = left - write * 1000000000
+
+  if write > 0
+    billions = englishNumber write
+    numString = numString + billions + ' billion'
+    if left > 0
+      numString = numString + ' '
+    end  
+  end
+
+  write = left/1000000
+  left = left - write * 1000000
+
+  if write > 0
+    millions = englishNumber write
+    numString = numString + millions + ' million'
+    if left > 0
+      numString = numString + ' '
+    end  
+  end
+  
+  write = left/1000
+  left = left - write * 1000
+
+  if write > 0
+    thousands = englishNumber write
+    numString = numString + thousands + ' thousand'
+    if left > 0
+      numString = numString + ' '
+    end  
+  end
+
   write = left/100
   left = left - write * 100
 
   if write > 0
     hundreds = englishNumber write
-    numString = numString + hundreds + 'hundred'
+    numString = numString + hundreds + ' hundred'
     if left > 0
       numString = numString + ' '
     end  
@@ -65,5 +110,4 @@ puts englishNumber(100)
 puts englishNumber(110)
 puts englishNumber(280)
 puts englishNumber(3311)
-puts englishNumber(9999999)
 puts englishNumber(1000000000)  
