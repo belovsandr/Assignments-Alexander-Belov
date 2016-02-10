@@ -22,7 +22,7 @@ def englishNumber number
     trillions = englishNumber write
     numString = numString + trillions + ' trillion'
     if left > 0
-      numString = numString + ' '
+      numString = numString + ' and '
     end  
   end
 
@@ -33,7 +33,7 @@ def englishNumber number
     billions = englishNumber write
     numString = numString + billions + ' billion'
     if left > 0
-      numString = numString + ' '
+      numString = numString + ' and '
     end  
   end
 
@@ -44,7 +44,7 @@ def englishNumber number
     millions = englishNumber write
     numString = numString + millions + ' million'
     if left > 0
-      numString = numString + ' '
+      numString = numString + ' and '
     end  
   end
   
@@ -55,7 +55,7 @@ def englishNumber number
     thousands = englishNumber write
     numString = numString + thousands + ' thousand'
     if left > 0
-      numString = numString + ' '
+      numString = numString + ' and '
     end  
   end
 
@@ -66,7 +66,7 @@ def englishNumber number
     hundreds = englishNumber write
     numString = numString + hundreds + ' hundred'
     if left > 0
-      numString = numString + ' '
+      numString = numString + ' and '
     end  
   end
 
@@ -75,14 +75,14 @@ def englishNumber number
   
   if write > 0
     if ((write == 1) and (left > 0))
-      numString = numString + teenagers[left-1]
+      numString = numString +teenagers[left-1]
       left = 0
     else
       numString = numString + tensPlace[write-1]
     end
   
     if left > 0
-      numString = numString + '-'
+      numString = numString + ' and '
     end
   end
 
@@ -108,6 +108,6 @@ puts englishNumber(45)
 puts englishNumber(98)
 puts englishNumber(100)
 puts englishNumber(110)
-puts englishNumber(280)
+puts englishNumber(283)
 puts englishNumber(3311)
 puts englishNumber(1000000000)  
