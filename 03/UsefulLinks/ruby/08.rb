@@ -1,31 +1,69 @@
-def ask question
-  goodAnswer = false
-  while (not goodAnswer)
-    puts question
-    reply = gets.chomp.downcase
-    if (reply == 'yes' or reply == 'no')
-      goodAnswer = true
-      if reply == 'yes'
-        answer = true
-      else
-        answer = false
-      end
-    else
-      puts 'Please answer "yes" or "no"!'
-    end   
+def englishNumber number
+
+  if number < 0
+    return 'Please enter a number that isn\'t negative'
   end
-  answer
+
+  if number == 0
+    return 'zero'
+  end
+  
+  numString =''
+  onesPlace = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+  tensPlace = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+  teenagers = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'ninteen']
+
+  left = number
+  write = left/100
+  left = left - write * 100
+
+  if write > 0
+    hundreds = englishNumber write
+    numString = numString + hundreds + 'hundred'
+    if left > 0
+      numString = numString + ' '
+    end  
+  end
+
+  write = left/10
+  left = left - write*10
+  
+  if write > 0
+    if ((write == 1) and (left > 0))
+      numString = numString + teenagers[left-1]
+      left = 0
+    else
+      numString = numString + tensPlace[write-1]
+    end
+  
+    if left > 0
+      numString = numString + '-'
+    end
+  end
+
+  write = left
+  left = 0
+
+  if write > 0
+    numString = numString + onesPlace[write-1]
+  end
+    
+  numString  
+  
 end
 
-ask 'Do you like eating tacos?'
-ask 'Do you like eating burritos?'
-wetsBed = ask 'Do you wet the bed?'
-ask 'Do you like eating chimchangas?'
-ask 'Do you like eating sopapillas?'
-ask 'Do you like eating tamales?'
-ask 'Do you like drinking horchata?'
-ask 'Do you like eating flautas?'
-puts
-puts "Thank you"
-puts
-puts wetsBed
+puts englishNumber(0)
+puts englishNumber(8)
+puts englishNumber(10)
+puts englishNumber(11)
+puts englishNumber(16)
+puts englishNumber(22)
+puts englishNumber(31)
+puts englishNumber(45)
+puts englishNumber(98)
+puts englishNumber(100)
+puts englishNumber(110)
+puts englishNumber(280)
+puts englishNumber(3311)
+puts englishNumber(9999999)
+puts englishNumber(1000000000)  
