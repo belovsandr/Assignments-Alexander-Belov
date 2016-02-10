@@ -1,5 +1,5 @@
-def sayMoo numberOfMoos
-  puts 'mooooo...'*numberOfMoos
+def doubleThis num
+  numTimes2=num*2
+  puts num.to_s+' doubled is '+numTimes2.to_s
 end
-sayMoo 3
-puts 'coin-coin'
+doubleThis 44
